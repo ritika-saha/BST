@@ -30,4 +30,27 @@ public class BST<T extends Comparable<T>> {
             inorder(root.right);
         }
     }
+
+
+    public int nodeCount(TreeNode<T> root){
+        if(root == null){
+            return 0;
+        }
+        int leftSize = nodeCount(root.left);
+        int rightSize = nodeCount(root.right);
+
+        return leftSize+rightSize+1;
+
+    }
+
+
+     public int height(TreeNode<T> root){
+        if(root ==null){
+            return 0;
+        }
+        int leftHeight = height(root.left);
+        int rightHeight = height(root.right);
+
+        return Math.max(leftHeight, rightHeight)+1;
+    }
 }
