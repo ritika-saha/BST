@@ -53,4 +53,19 @@ public class BST<T extends Comparable<T>> {
 
         return Math.max(leftHeight, rightHeight)+1;
     }
+
+     public boolean searchNode(TreeNode<T> root, T data){
+        if(root == null){
+            return false;
+        }
+        if(root.data.equals(data)){
+            return true;
+        }
+        if(data.compareTo(root.data) < 0){
+            return searchNode(root.left,data);
+        }else{
+            return searchNode(root.right,data);
+        }
+
+    }
 }

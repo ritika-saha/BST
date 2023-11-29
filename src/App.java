@@ -38,5 +38,9 @@ public class App {
         System.out.println("\nThe height of the bst is : "+height );
         System.out.println("Number of nodes in the BST is : "+nodeCount);
 
+
+        System.out.println("Searching in the BST----");
+        System.out.println(bst.searchNode(bst.root, 63)?"NODE "+63+" FOUND !!!":"NODE "+63+" NOT FOUND ---");
+
     }
 }
